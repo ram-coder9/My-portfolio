@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="icon" href="./assets/images/images.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f0f9ff, #cbebff);
+      color: #333;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.dark {
+      background: #121212;
+      color: #f1f1f1;
+    }
+
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    body.dark header {
+      background: #1e3a8a;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-top: 15px;
+      border: 4px solid rgb(249, 246, 246);
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+      border-left: 5px solid #0077b6;
+      padding-left: 10px;
+    }
+
+    body.dark h2 {
+      color: #60a5fa;
+      border-color: #60a5fa;
+    }
+
+    .social li {
+      text-decoration: none;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      display: inline-flex;
+      gap: 10%;
+      margin-top: 20px;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      background-color: #fefeff;
+      border-top: 100px;
+    }
+
+    .social li a:hover {
+      padding: 0px;
+    }
+
+    .social :hover {
+      color: #de3f05;
+      border-color: #023e8a;
+      background-color: #877ebf;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, background 0.5s, color 0.5s;
+    }
+
+    .card p a {
+      text-decoration: none;
+    }
+
+    body.dark .card {
+      background: #1f2937;
+      color: #f1f1f1;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #023e8a;
+      color: white;
+      margin-top: 40px;
+      transition: background 0.5s;
+    }
+
+    body.dark footer {
+      background: #111827;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0077b6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #023e8a;
+    }
+
+    body.dark .btn {
+      background: #2563eb;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background: #0077b6;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    body.dark .dark-toggle {
+      background: #2563eb;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Button -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I am <b>[Rambabu Parasa]</b> – Web Developer | Designer | Freelancer</p>
+    <!-- Profile Picture -->
+    <img src="./assets/images/My profile.jpg" alt="My Photo" class="profile-pic">
+    <br>
+    <a href="#contact" class="btn">📱Contact Me</a>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am a passionate web developer skilled in HTML, CSS, JavaScript, and Python.
+        I love building creative and user-friendly digital experiences. 🚀</p>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="card">
+      <li>🌐 Web Development</li>
+      <li>🎨 UI/UX Design</li>
+      <li>⚡ JavaScript, Python</li>
+      <li>📷 Photography</li>
+      <li>🖥 Graphic Editing</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="card">
+      <p><b>1. Personal Website</b> – My first portfolio site.</p>
+      <p><b>2. Online Store</b> – An e-commerce design.</p>
+      <p><b>3. Portfolio Template</b> – The template you are viewing now 😃</p>
+    </div>
+
+    <h2 id="contact">Contact</h2>
+    <div class="card">
+      <p>📧 Email: <a href="mailto:yourname@gmail.com">rambabuparasa678@gmail.com</a></p>
+      <p>📱 Phone: +91-9959567951</p>
+      <div class="social">
+        <li><a href="https://www.facebook.com/share/15rnjnnWWb/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/urs.truly_ram?igsh=MW53ZmZ0YjFyNGd5cw=="><i
+              class="fab fa-instagram"></i></a></li>
+        <li><a
+            href="https://www.linkedin.com/in/rambabu-parasa-46b41123a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="#"> <i class="fa fa-codepen"></i></a></li>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio | Made with ❤ in HTML, CSS & JS</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+
+</html>
